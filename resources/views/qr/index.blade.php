@@ -31,12 +31,11 @@
                     <button class="btn btn-primary btn-sm">Add New Book</button>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-sm compact-table">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Book Title</th>
-                                <th>Author</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -44,19 +43,25 @@
                             <tr>
                                 <td>1</td>
                                 <td>The Little Owl's Adventure</td>
-                                <td>John Doe</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                    <button type="button" class="btn btn-sm btn-outline-primary p-1" title="Edit">
+                                            <img src="{{ asset('icons/edit_12435906.svg') }}" width="20" alt="Edit">
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger p-1" title="Delete">
+                                            <img src="{{ asset('icons/close_9915981.svg') }}" width="20" alt="Delete">
+                                        </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Learning Laravel</td>
-                                <td>Jane Smith</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                    <button type="button" class="btn btn-sm btn-outline-primary p-1" title="Edit">
+                                            <img src="{{ asset('icons/edit_12435906.svg') }}" width="20" alt="Edit">
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger p-1" title="Delete">
+                                            <img src="{{ asset('icons/close_9915981.svg') }}" width="20" alt="Delete">
+                                        </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -77,22 +82,34 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Pack 1
                             <span>
-                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                <button type="button" class="btn btn-sm btn-outline-primary p-1" title="Edit">
+                                            <img src="{{ asset('icons/edit_12435906.svg') }}" width="20" alt="Edit">
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger p-1" title="Delete">
+                                            <img src="{{ asset('icons/close_9915981.svg') }}" width="20" alt="Delete">
+                                        </button>
                             </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Pack 2
                             <span>
-                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                <button type="button" class="btn btn-sm btn-outline-primary p-1" title="Edit">
+                                            <img src="{{ asset('icons/edit_12435906.svg') }}" width="20" alt="Edit">
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger p-1" title="Delete">
+                                            <img src="{{ asset('icons/close_9915981.svg') }}" width="20" alt="Delete">
+                                        </button>
                             </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             Pack 3
                             <span>
-                                <a href="#" class="btn btn-sm btn-info">Edit</a>
-                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                <button type="button" class="btn btn-sm btn-outline-primary p-1" title="Edit">
+                                            <img src="{{ asset('icons/edit_12435906.svg') }}" width="20" alt="Edit">
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger p-1" title="Delete">
+                                            <img src="{{ asset('icons/close_9915981.svg') }}" width="20" alt="Delete">
+                                        </button>
                             </span>
                         </li>
                     </ul>
@@ -103,17 +120,28 @@
 
 </div>
 
+<!-- Custom CSS -->
+<style>
+    .compact-table th,
+    .compact-table td {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.85rem;
+        vertical-align: middle;
+    }
+</style>
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 <script>
-   
     var triggerTabList = [].slice.call(document.querySelectorAll('#dashboardTabs button'))
     triggerTabList.forEach(function (triggerEl) {
-      var tabTrigger = new bootstrap.Tab(triggerEl)
+        var tabTrigger = new bootstrap.Tab(triggerEl)
 
-      triggerEl.addEventListener('click', function (event) {
-        event.preventDefault()
-        tabTrigger.show()
-      })
+        triggerEl.addEventListener('click', function (event) {
+            event.preventDefault()
+            tabTrigger.show()
+        })
     })
 </script>
 @endsection
