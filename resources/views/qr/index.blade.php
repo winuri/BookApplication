@@ -103,9 +103,9 @@
 
 </div>
 
-<!-- Bootstrap JS for Tabs (make sure bootstrap.bundle.min.js is included) -->
+
 <script>
-    // Optional: You can activate tabs via JS if needed
+   
     var triggerTabList = [].slice.call(document.querySelectorAll('#dashboardTabs button'))
     triggerTabList.forEach(function (triggerEl) {
       var tabTrigger = new bootstrap.Tab(triggerEl)
