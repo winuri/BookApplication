@@ -180,43 +180,39 @@
         <div>
             <img src="{{ asset('images/spaceship.png') }}" alt="Spaceship" class="spaceship">
         </div>
-    </div>
-    
-    <!-- Content Cards -->
-    <div class="content-cards-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-3">
+        <div class="col-md-3">
                     <div class="content-card">
-                        <img src="https://via.placeholder.com/150/ffb6c1" class="img-fluid rounded-circle mb-3" alt="Card 1">
+                        <img src="images/picture1.jpg" class="img-fluid rounded-circle mb-3" alt="Card 1">
                         <h4>Guch hoy yudre</h4>
                         <p>Wion alirakd asreaed anog zt, desioaned wih fiacreat.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="content-card">
-                        <img src="https://via.placeholder.com/150/add8e6" class="img-fluid rounded-circle mb-3" alt="Card 2">
+                        <img src="images/picture2.jpg" class="img-fluid rounded-circle mb-3" alt="Card 2">
                         <h4>Doatis 5lcen</h4>
                         <p>Lianam eany iog dilenopa pe ecisnamd wih doiwet.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="content-card">
-                        <img src="https://via.placeholder.com/150/90ee90" class="img-fluid rounded-circle mb-3" alt="Card 3">
+                        <img src="images/picture3.jpg" class="img-fluid rounded-circle mb-3" alt="Card 3">
                         <h4>Simarpr grain</h4>
                         <p>Weavoltan instil arad el for a tenalr boy dol propers.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="content-card">
-                        <img src="https://via.placeholder.com/150/ff9999" class="img-fluid rounded-circle mb-3" alt="Card 4">
+                        <img src="images/picture4.jpeg" class="img-fluid rounded-circle mb-3" alt="Card 4">
                         <h4>Og Surygle day</h4>
                         <p>Viter a singhetonre nifife cat, alu and with fechiastic.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        
     </div>
+    
+    
 
     <!-- About Us Section -->
     <section class="about-section">
