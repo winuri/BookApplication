@@ -40,8 +40,8 @@
         /* Hero */
         .hero {
             text-align: left;
-            padding: 50px 50px; /* reduced padding */
-            min-height: 70vh;    /* reduced height */
+            padding: 50px 50px; 
+            min-height: 70vh;   
         }
         .hero h1 {
             font-size: 56px;
@@ -60,7 +60,7 @@
             font-weight: 600;
             border-radius: 30px;
             color: white;
-            text-decoration: none; /* Crucial for link to look like button */
+            text-decoration: none; 
             display: inline-flex;
             align-items: center;
         }
@@ -84,7 +84,7 @@
 
         /* Content Cards as Buttons */
         .content-cards-section {
-            padding: 30px 0; /* reduced padding */
+            padding: 30px 0; 
             text-align: center;
             z-index: 2;
         }
@@ -125,7 +125,6 @@
             transform: translateY(-5px);
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
-        /* Background colors for cards */
         .pink { background-color: #ffc0cb; }
         .yellow { background-color: #fffacd; }
         .skyblue { background-color: #87ceeb; }
@@ -138,34 +137,34 @@
             color: #000;
         }
                 
-        /* Custom styles for About Us section images to match the provided layout */
+        
         .about-images-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns */
-            grid-template-rows: repeat(2, 1fr);    /* Two rows */
-            gap: 10px; /* Space between images */
-            height: 400px; /* Set a fixed height for the grid container */
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);    
+            gap: 10px; 
+            height: 400px; 
         }
 
         .about-image-1 {
-            grid-column: 1 / 2; /* Spans the first column */
-            grid-row: 1 / 3;    /* Spans both rows */
+            grid-column: 1 / 2; 
+            grid-row: 1 / 3;    
         }
 
         .about-image-2 {
-            grid-column: 2 / 3; /* Spans the second column */
-            grid-row: 1 / 2;    /* Spans the first row */
+            grid-column: 2 / 3; 
+            grid-row: 1 / 2;    
         }
 
         .about-image-3 {
-            grid-column: 2 / 3; /* Spans the second column */
-            grid-row: 2 / 3;    /* Spans the second row */
+            grid-column: 2 / 3; 
+            grid-row: 2 / 3;   
         }
 
         .about-images-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures images cover their container without distortion */
+            object-fit: cover; 
             border-radius: 12px;
         }
 
@@ -176,7 +175,7 @@
         }
 
         .about-section .feature-box img {
-            width: 50px; /* Adjust icon size as needed */
+            width: 50px; 
             height: 50px;
             margin-right: 15px;
             object-fit: contain;
@@ -191,7 +190,7 @@
         /* Courses Section Styles */
         .courses-section { 
             padding: 80px 0; 
-            background: #fff; /* Changed background for contrast based on image */
+            background: #fff; 
             color: #000;
         }
         .course-filter-buttons .btn {
@@ -210,15 +209,15 @@
         .course-card { 
             background: #fff; 
             border-radius: 12px; 
-            padding: 15px; /* Reduced padding to fit more content */
+            padding: 15px; 
             text-align: left; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            height: 100%; /* Ensures all cards are same height */
+            height: 100%; 
         }
         .course-card img { 
             border-radius: 12px; 
             margin-bottom: 10px;
-            height: 150px; /* Fixed image height for consistency */
+            height: 150px; 
             object-fit: cover;
             width: 100%;
         }
@@ -254,7 +253,7 @@
             font-size: 0.85rem;
             color: #555;
             margin-bottom: 10px;
-            height: 3.5em; /* Limit height for uniform look */
+            height: 3.5em; 
             overflow: hidden;
         }
         .course-card .rating {
@@ -263,7 +262,7 @@
             margin-bottom: 10px;
         }
         .course-card .btn-join {
-            background: #be8eff; /* Purple button color from image */
+            background: #be8eff; 
             color: white;
             border: none;
             padding: 8px 15px;
@@ -272,11 +271,11 @@
             width: 100%;
             margin-top: 10px;
         }
-        /* Style for the "Free" course price */
+        
         .course-card .price.free {
             color: #0e8700;
         }
-        /* Style for the start date button */
+        
         .course-card .btn-start-date {
             background: #be8eff;
             color: white;
@@ -289,14 +288,294 @@
             font-size: 0.9rem;
         }
 
-        /* FAQ*/
-        .faq-section { background: #fff; color: #000; padding: 80px 20px; }
-        .faq-section h2 { font-weight: 700; margin-bottom: 40px; text-align: center; }
-        .accordion-button { font-weight: 500; }
-        /* Experts*/
-        .experts-section { background: #f9f9f9; padding: 80px 20px; text-align: center; color: #000; }
-        .experts-section h2 { font-weight: 700; margin-bottom: 40px; }
-        .expert-card img { border-radius: 10px; }
+        .faq-section { 
+            background: url("{{ asset('images/FAQ_wallpepar.png') }}") no-repeat center center fixed;
+            background: linear-gradient(135deg, #e3f2fd, #d1c4e9); /* Light gradient background */
+            color: #000; 
+            padding: 80px 20px; 
+        }
+        .faq-content-wrapper {
+            background-color: white; 
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 30px;
+        }
+        .faq-main {
+            flex-grow: 1;
+        }
+        .faq-sidebar {
+            width: 350px; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .faq-section h2 { 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            text-align: left; 
+            color: #0b1c45;
+        }
+        
+        .accordion-item {
+            border: none;
+            margin-bottom: 5px;
+            border-radius: 12px;
+            box-shadow: none; 
+            border-bottom: 1px solid #eee; 
+        }
+
+        .accordion-button {
+            background-color: transparent;
+            color: #333; 
+            font-weight: 600; 
+            padding: 15px 0; 
+            border-radius: 0 !important;
+            border: none;
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #be8eff;
+            background-color: transparent;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-button:focus {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            filter: none; 
+            transform: rotate(-90deg); 
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            transform: rotate(0deg);
+            filter: none;
+        }
+
+        .accordion-body {
+            background-color: white; 
+            color: #666; 
+            padding: 15px 0 20px 0;
+            border-radius: 0; 
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .accordion {
+            border-top: 2px solid #be8eff; 
+        }
+        
+       
+        .support-card {
+            background-color: #fce4ec; 
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .support-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .support-card h4 {
+            color: #0b1c45;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .support-card p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        .support-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .support-buttons .btn-custom {
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .btn-contact { background-color: #66bb6a; } 
+        .btn-call { background-color: #ffb347; } 
+        .btn-video { background-color: #ff6a3d; } 
+
+        
+        .download-card {
+            background-color: #f8bbd0; 
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .download-card h4 {
+            color: #0b1c45;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .download-card p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .app-links a {
+            margin: 0 5px;
+            display: inline-block;
+        }
+        .app-links img {
+            width: 120px;
+            height: auto;
+        }
+
+        
+        .accordion-button::after {
+            filter: invert(1); 
+        }
+
+        .accordion-body {
+            background-color: #f8f9fa; 
+            color: #333; 
+            padding: 20px;
+            border-radius: 0 0 12px 12px; 
+        }
+        /* --- EXPERTS SECTION STYLES --- */
+
+/* Main Section Background/Spacing - Adjust as needed for overall page consistency */
+.experts-section {
+    padding: 80px 0; /* Example padding */
+    background-color: #f8f9fa; /* Light background to help the section stand out */
+}
+
+/* Heading styles */
+.experts-section .sub-heading {
+    color: #6c9a30; /* Green color for 'OUR EXPERTS' */
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.experts-section .main-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0b1c45; /* Dark blue/black text */
+    line-height: 1.2;
+}
+
+.experts-section .decorative-emojis {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.experts-section .intro-paragraph {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Decorative Icons/Elements Positioning (Right side of text) */
+.experts-section .text-content-right {
+    position: relative; /* Essential for absolute positioning of children */
+}
+
+/* Pink/Red decorative element (Top Right) */
+.experts-section .deco-magic {
+    position: absolute;
+    top: -10px;
+    right: 80px;
+    font-size: 2rem;
+    color: #f06292; /* Pink color */
+}
+
+/* Green decorative element (Bottom Right) */
+.experts-section .deco-green-star {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    font-size: 3rem;
+    color: #8bc34a; /* Green color */
+    transform: rotate(15deg);
+}
+
+/* Dashed Circle/Badge element (Far Right) */
+.experts-section .deco-badge-circle {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #ffc107; /* Yellow dashed border */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experts-section .deco-badge-icon {
+    font-size: 1.5rem;
+    color: #ffc107;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+
+/* Expert Card Styles */
+.expert-card .img-wrapper {
+    border: 3px solid #ddd; /* Prominent grey border */
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative; /* For the overlay effect on the last card */
+}
+
+.expert-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover;
+}
+
+.expert-card h5 {
+    font-weight: 700;
+    color: #0b1c45;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.expert-card p {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Specific Style for Elspeth's Card Overlay (Last Expert) */
+.expert-card .img-wrapper.overlay-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* Radial gradient for the partial yellow-orange overlay */
+    background: radial-gradient(circle at 100% 0%, transparent 60%, rgba(255, 193, 7, 0.4) 100%);
+    border-radius: 12px;
+    pointer-events: none; /* Allows clicks to pass through to the image */
+}
         /* Footer*/
         .footer { background: #0b1c45; color: #fff; padding: 40px 20px; text-align: center; }
 
@@ -327,7 +606,7 @@
             <img src="{{ asset('images/spaceship.png') }}" alt="Spaceship" class="spaceship">
         </div>
     </div>
-             
+    
     <div class="container content-cards-section"> 
         <div class="row g-4 justify-content-center">
             <div class="col-md-3">
@@ -360,7 +639,7 @@
             </div>
         </div>
     </div>
-  
+ 
     <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
@@ -544,84 +823,149 @@
     </section>
 
     <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            What costs are covered in course fees?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our package includes program materials, trips, unique events, and online resources.
+    <div class="container">
+        <div class="faq-content-wrapper">
+            <div class="faq-main">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                What costs are covered in course fees?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                kfkfgjsggrrrrr
+                            
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Do you take kids for field trips?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, we organize safe and educational field trips during the year.
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                When do you communicate with parents?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                bdbffhfhskfkf
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            How will your education system help my child?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We use modern learning methods that balance academics, creativity, and play.
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Do you take kids for field trip?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                DAFGHRJFNG
+                            </div>
+                        </div>
+                    </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                How will your education system helps my child?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                sgerhryjfncb
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="faq-sidebar">
+                
+                <div class="support-card">
+                    <img src="images/support_agent.png" class="img-fluid" alt="Support Agent" style="max-height: 180px;">
+                    <h4>Need Support?</h4>
+                    <p>chat with us</p>
+                    <div class="support-buttons">
+                        <a href="#" class="btn-custom btn-contact"><i class="fas fa-comment-dots"></i> Contact Us</a>
+                        <a href="#" class="btn-custom btn-call"><i class="fas fa-phone"></i> Call Us</a>
+                        <a href="#" class="btn-custom btn-video"><i class="fas fa-video"></i> Video Call</a>
+                    </div>
+                </div>
+
+                <div class="download-card">
+                    <h4>Download Our App</h4>
+                    <p>get the app </p>
+                    <div class="app-links">
+                        <a href="#"><img src="images/google_play.png" alt="Get it on Google Play"></a>
+                        <a href="#"><img src="images/app_store.png" alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
     
     <section class="experts-section">
-        <div class="container">
-            <h2>Incredible People Behind Incredible Students</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="expert-card">
-                        <img src="https://via.placeholder.com/250" alt="Aurora" class="img-fluid mb-3">
-                        <h5>AURORA JACKSON</h5>
-                        <p>English</p>
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 text-start">
+                <h4 class="sub-heading">OUR EXPERTS</h4>
+                <h2 class="main-heading">
+                    Incredible People Behind <br> Incredible Students.
+                </h2>
+                
+            </div>
+            <div class="col-lg-6 text-start text-content-right">
+                <p class="intro-paragraph">
+                    our talented Teachers....................
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="expert-card text-center">
+                    <div class="img-wrapper">
+                         <img src="images/teacher1.jpg" alt="Aurora Jackson" class="img-fluid">
                     </div>
+                    <h5>AURORA JACKSON</h5>
+                    <p>English</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="expert-card">
-                        <img src="https://via.placeholder.com/250" alt="Cosmi" class="img-fluid mb-3">
-                        <h5>COSMI</h5>
-                        <p>French</p>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="expert-card text-center">
+                    <div class="img-wrapper">
+                         <img src="images/teacher2.jpg" alt="Cosmi" class="img-fluid">
                     </div>
+                    <h5>COSMI</h5>
+                    <p>French</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="expert-card">
-                        <img src="https://via.placeholder.com/250" alt="Debora" class="img-fluid mb-3">
-                        <h5>DEBORA</h5>
-                        <p>Classroom Management</p>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="expert-card text-center">
+                    <div class="img-wrapper">
+                         <img src="images/teacher3.jpg" alt="Debora" class="img-fluid">
                     </div>
+                    <h5>DEBORA</h5>
+                    <p>Classroom Management</p>
                 </div>
-                <div class="col-md-3">
-                    <div class="expert-card">
-                        <img src="https://via.placeholder.com/250" alt="Elspeth" class="img-fluid mb-3">
-                        <h5>ELSPETH</h5>
-                        <p>Montessori</p>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="expert-card text-center">
+                    <div class="img-wrapper overlay-effect">
+                         <img src="images/teacher4.jpg" alt="Elspeth" class="img-fluid">
                     </div>
+                    <h5>ELSPETH</h5>
+                    <p>Montessori</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <footer class="footer">
         <p>&copy; 2025 Kids Website | All Rights Reserved.</p>
