@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: #0b1c45;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800"><path fill="%23ff9999" d="M0,320c0,0,210.8-213.9,431.1-213.9C651.4,106.1,876.1,320,1051.1,320c175,0,388.9-213.9,388.9-213.9V800H0V320z" opacity="0.3"/><path fill="%23fff" d="M0,320c0,0,181.1-140.7,351.1-140.7S701.4,320,871.4,320c170,0,388.6-140.7,388.6-140.7V800H0V320z" opacity="0.5"/><path fill="%23ff9999" d="M0,426.7c0,0,206.1-255,426.1-255S842.2,426.7,1052.2,426.7s387.8-255,387.8-255V800H0V426.7z" opacity="0.2"/><path fill="%23fff" d="M0,480c0,0,229.4-204,449.4-204s429.2,204,649.2,204c220,0,341.4-204,341.4-204V800H0V480z" opacity="0.4"/><path fill="%23ffcccc" d="M0,533.3c0,0,229.4-255,449.4-255s429.2,255,649.2,255c220,0,341.4-255,341.4-255V800H0V533.3z" opacity="0.1"/></svg>');
-            background-repeat: no-repeat;
-            background-position: top center;
+            margin: 0;
+            padding: 0;
+            background: url("{{ asset('images/wallpepar.png') }}") no-repeat center center fixed;
             background-size: cover;
-            color: white;
             font-family: 'Poppins', sans-serif;
             position: relative;
-            z-index: 1;
+            color: white;
             overflow-x: hidden;
         }
         body::before {
@@ -26,8 +24,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, #0b1c45, #0f305e, #1c447b);
-            opacity: 0.95;
+            background: rgba(11, 28, 69, 0.2);
             z-index: -1;
         }
         .navbar-brand {
@@ -39,10 +36,12 @@
             margin: 0 15px;
             font-weight: 500;
         }
+
+        /* Hero */
         .hero {
             text-align: left;
-            padding: 80px 50px;
-            min-height: 80vh;
+            padding: 50px 50px; /* reduced padding */
+            min-height: 70vh;   /* reduced height */
         }
         .hero h1 {
             font-size: 56px;
@@ -82,76 +81,75 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Content cards */
+        /* Content Cards as Buttons */
         .content-cards-section {
-            position: relative;
-            padding: 100px 0 50px;
+            padding: 30px 0; /* reduced padding */
             text-align: center;
-            background-color: #0b1c45;
             z-index: 2;
         }
         .content-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 15px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; 
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            height: 250px;
+            width: 260px; 
+            max-width: 90%; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #000;
+            overflow: hidden; 
+        }
+        .content-card img {
+            width: 100%; 
+            height: 140px; 
+            object-fit: cover;
+            border-radius: 10px; 
+            margin-bottom: 8px;
+        }
+        .content-card h5 {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .content-card p {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            margin: 0;
         }
         .content-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
+        /* Background colors for cards */
+        .pink { background-color: #ffc0cb; }
+        .yellow { background-color: #fffacd; }
+        .skyblue { background-color: #87ceeb; }
+        .cream { background-color: #91e0a5ff; }
 
-        /* About */
+        /* Other Sections (About, Courses, FAQ, Experts, Footer) */
         .about-section { background: #0b1c45; padding: 80px 0; }
         .feature-box { background: #3a07d5ff; padding: 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
         .feature-box i { font-size: 2rem; color: #ff6a3d; margin-bottom: 10px; }
 
-        /* Courses */
         .courses-section { padding: 80px 0; }
         .course-card { background: #0b1c45; border-radius: 12px; padding: 20px; text-align: left; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
         .course-card img { border-radius: 12px; margin-bottom: 15px; }
         .course-card:hover { transform: translateY(-8px); transition: .3s; }
         .price { font-weight: bold; color: #ff6a3d; }
 
-        /* FAQ */
-        .faq-section {
-            background: #fff;
-            color: #000;
-            padding: 80px 20px;
-        }
-        .faq-section h2 {
-            font-weight: 700;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .accordion-button {
-            font-weight: 500;
-        }
+        .faq-section { background: #fff; color: #000; padding: 80px 20px; }
+        .faq-section h2 { font-weight: 700; margin-bottom: 40px; text-align: center; }
+        .accordion-button { font-weight: 500; }
 
-        /* Experts */
-        .experts-section {
-            background: #f9f9f9;
-            padding: 80px 20px;
-            text-align: center;
-            color: #000;
-        }
-        .experts-section h2 {
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
-        .expert-card img {
-            border-radius: 10px;
-        }
+        .experts-section { background: #f9f9f9; padding: 80px 20px; text-align: center; color: #000; }
+        .experts-section h2 { font-weight: 700; margin-bottom: 40px; }
+        .expert-card img { border-radius: 10px; }
 
-        /* Footer */
-        .footer {
-            background: #0b1c45;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
+        .footer { background: #0b1c45; color: #fff; padding: 40px 20px; text-align: center; }
     </style>
 </head>
 <body>
@@ -180,39 +178,41 @@
         <div>
             <img src="{{ asset('images/spaceship.png') }}" alt="Spaceship" class="spaceship">
         </div>
-        <div class="col-md-3">
-                    <div class="content-card">
-                        <img src="images/picture1.jpg" class="img-fluid rounded-circle mb-3" alt="Card 1">
-                        <h4>Guch hoy yudre</h4>
-                        <p>Wion alirakd asreaed anog zt, desioaned wih fiacreat.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="content-card">
-                        <img src="images/picture2.jpg" class="img-fluid rounded-circle mb-3" alt="Card 2">
-                        <h4>Doatis 5lcen</h4>
-                        <p>Lianam eany iog dilenopa pe ecisnamd wih doiwet.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="content-card">
-                        <img src="images/picture3.jpg" class="img-fluid rounded-circle mb-3" alt="Card 3">
-                        <h4>Simarpr grain</h4>
-                        <p>Weavoltan instil arad el for a tenalr boy dol propers.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="content-card">
-                        <img src="images/picture4.jpeg" class="img-fluid rounded-circle mb-3" alt="Card 4">
-                        <h4>Og Surygle day</h4>
-                        <p>Viter a singhetonre nifife cat, alu and with fechiastic.</p>
-                    </div>
-                </div>
-            </div>
-        
     </div>
-    
-    
+
+    <!-- Content Cards as Buttons -->
+    <div class="container content-cards-section">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+                <a href="page1.html" class="content-card pink">
+                    <img src="images/picture1.jpg" alt="Card 1">
+                    <h5>Guch hoy yudre</h5>
+                    <p>Wion alirakd asreaed anog zt, desioaned wih fiacreat.</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="page2.html" class="content-card yellow">
+                    <img src="images/picture2.jpg" alt="Card 2">
+                    <h5>Doatis 5lcen</h5>
+                    <p>Lianam eany iog dilenopa pe ecisnamd wih doiwet.</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="page3.html" class="content-card skyblue">
+                    <img src="images/picture3.jpg" alt="Card 3">
+                    <h5>Simarpr grain</h5>
+                    <p>Weavoltan instil arad el for a tenalr boy dol propers.</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="page4.html" class="content-card cream">
+                    <img src="images/picture4.jpeg" alt="Card 4">
+                    <h5>Og Surygle day</h5>
+                    <p>Viter a singhetonre nifife cat, alu and with fechiastic.</p>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- About Us Section -->
     <section class="about-section">
