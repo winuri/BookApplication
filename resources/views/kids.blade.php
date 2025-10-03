@@ -887,9 +887,9 @@
                     <h4>Need Support?</h4>
                     <p>chat with us</p>
                     <div class="support-buttons">
-                        <a href="#" class="btn-custom btn-contact"><i class="fas fa-comment-dots"></i> Contact Us</a>
-                        <a href="#" class="btn-custom btn-call"><i class="fas fa-phone"></i> Call Us</a>
-                        <a href="#" class="btn-custom btn-video"><i class="fas fa-video"></i> Video Call</a>
+                        <a href="#" class="btn-custom btn-contact"><i class="fas fa-comment-dots"><br/></i> Contact Us</a>
+                        <a href="#" class="btn-custom btn-call"><i class="fas fa-phone"><br/></i> Call Us</a>
+                        <a href="#" class="btn-custom btn-video"><i class="fas fa-video"><br/></i> Video Call</a>
                     </div>
                 </div>
 
