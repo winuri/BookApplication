@@ -41,7 +41,7 @@
         .hero {
             text-align: left;
             padding: 50px 50px; /* reduced padding */
-            min-height: 70vh;   /* reduced height */
+            min-height: 70vh;    /* reduced height */
         }
         .hero h1 {
             font-size: 56px;
@@ -60,6 +60,7 @@
             font-weight: 600;
             border-radius: 30px;
             color: white;
+            text-decoration: none; /* Crucial for link to look like button */
             display: inline-flex;
             align-items: center;
         }
@@ -131,41 +132,163 @@
         .cream { background-color: #91e0a5ff; }
 
         /* About*/
-        /* ADD THIS TO YOUR EXISTING <style> BLOCK */
+        .about-section { 
+            background: #e2e0cfff; 
+            padding: 80px 0;
+            color: #000;
+        }
+                
+        /* Custom styles for About Us section images to match the provided layout */
+        .about-images-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            grid-template-rows: repeat(2, 1fr);    /* Two rows */
+            gap: 10px; /* Space between images */
+            height: 400px; /* Set a fixed height for the grid container */
+        }
 
-.about-section { 
-    background: #e2e0cfff; 
-    padding: 80px 0;
-    color: #000;
-}
-.about-image-grid {
-    display: grid;
-    /* Two columns: one for the top main image, two for the smaller bottom images */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-}
-.about-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
+        .about-image-1 {
+            grid-column: 1 / 2; /* Spans the first column */
+            grid-row: 1 / 3;    /* Spans both rows */
+        }
 
+        .about-image-2 {
+            grid-column: 2 / 3; /* Spans the second column */
+            grid-row: 1 / 2;    /* Spans the first row */
+        }
 
-.about-img-container {
-    border: 10px solid #fff; /* White border around images */
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
+        .about-image-3 {
+            grid-column: 2 / 3; /* Spans the second column */
+            grid-row: 2 / 3;    /* Spans the second row */
+        }
+
+        .about-images-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover their container without distortion */
+            border-radius: 12px;
+        }
+
+        .about-section .feature-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .about-section .feature-box img {
+            width: 50px; /* Adjust icon size as needed */
+            height: 50px;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+
+        .about-section .feature-box h6 {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
         
-        /* Courses*/
-        .courses-section { padding: 80px 0; }
-        .course-card { background: #0b1c45; border-radius: 12px; padding: 20px; text-align: left; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
-        .course-card img { border-radius: 12px; margin-bottom: 15px; }
-        .course-card:hover { transform: translateY(-8px); transition: .3s; }
-        .price { font-weight: bold; color: #ff6a3d; }
+        /* Courses Section Styles */
+        .courses-section { 
+            padding: 80px 0; 
+            background: #fff; /* Changed background for contrast based on image */
+            color: #000;
+        }
+        .course-filter-buttons .btn {
+            background-color: #f0f0f0;
+            color: #000;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin: 0 5px 15px 5px;
+            font-size: 0.9rem;
+        }
+        .course-filter-buttons .btn.active {
+            background-color: #be8eff;
+            color: #fff;
+            font-weight: 600;
+        }
+        .course-card { 
+            background: #fff; 
+            border-radius: 12px; 
+            padding: 15px; /* Reduced padding to fit more content */
+            text-align: left; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            height: 100%; /* Ensures all cards are same height */
+        }
+        .course-card img { 
+            border-radius: 12px; 
+            margin-bottom: 10px;
+            height: 150px; /* Fixed image height for consistency */
+            object-fit: cover;
+            width: 100%;
+        }
+        .course-card h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .course-card .category {
+            color: #7b7b7b;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .course-card .pricing {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+        .course-card .old-price { 
+            font-size: 1rem; 
+            color: #999; 
+            text-decoration: line-through; 
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+        .course-card .price { 
+            font-weight: bold; 
+            color: #be8eff; 
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        .course-card .description {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 10px;
+            height: 3.5em; /* Limit height for uniform look */
+            overflow: hidden;
+        }
+        .course-card .rating {
+            color: gold;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        .course-card .btn-join {
+            background: #be8eff; /* Purple button color from image */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 500;
+            width: 100%;
+            margin-top: 10px;
+        }
+        /* Style for the "Free" course price */
+        .course-card .price.free {
+            color: #0e8700;
+        }
+        /* Style for the start date button */
+        .course-card .btn-start-date {
+            background: #be8eff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 500;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
         /* FAQ*/
         .faq-section { background: #fff; color: #000; padding: 80px 20px; }
         .faq-section h2 { font-weight: 700; margin-bottom: 40px; text-align: center; }
@@ -176,11 +299,11 @@
         .expert-card img { border-radius: 10px; }
         /* Footer*/
         .footer { background: #0b1c45; color: #fff; padding: 40px 20px; text-align: center; }
+
+
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg p-3">
         <div class="container">
             <a class="navbar-brand fw-bold fs-3">Kids</a>
@@ -193,21 +316,19 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero -->
+        
     <div class="container d-flex flex-wrap align-items-center justify-content-between hero">
         <div>
             <h1>Surepite with Kid! game</h1>
             <p>little owl project aaa bbbbb</p>
-            <button class="btn-play">Get a Play</button>
+            <a href="#" class="btn-play">Get a Play</a>
         </div>
         <div>
             <img src="{{ asset('images/spaceship.png') }}" alt="Spaceship" class="spaceship">
         </div>
     </div>
-
-    <!-- Content Cards as Buttons -->
-    <div class="container content-cards-section">
+             
+    <div class="container content-cards-section"> 
         <div class="row g-4 justify-content-center">
             <div class="col-md-3">
                 <a href="page1.html" class="content-card pink">
@@ -239,91 +360,189 @@
             </div>
         </div>
     </div>
-
-    <!-- About Us Section -->
+  
     <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h4>About Us</h4>
+                    <h4 class="text-warning">ABOUT US</h4>
                     <h2>Globally Recognized Interactive Preschool Education</h2>
                     <p>Creative, fun and child-friendly environment with professional staff members. Learn with real-time activities and build strong foundations for future learning.</p>
-                    <div class="row">
+                    <div class="row mt-4">
                         <div class="col-md-6 feature-box">
-                            <i class="fas fa-child"></i>
-                            <img src="images/p1.png" alt="Card 4">
+                            <img src="images/p1.png" alt="Child Friendly Environment Icon">
                             <h6>Child Friendly Environment</h6>
                         </div>
                         <div class="col-md-6 feature-box">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <img src="images/p2.png" alt="Card 4">
-                            <h6>professional Staff Members</h6>
-                        </div>
-                        <div class="col-md-6 feature-box">
-                            <i class="fas fa-clock"></i>
-                            <img src="images/p3.png" alt="Card 4">
+                            <img src="images/p2.png" alt="Real-Time Education Icon">
                             <h6>Real-Time Education</h6>
                         </div>
                         <div class="col-md-6 feature-box">
-                            <i class="fas fa-school"></i>
-                            <img src="images/p4.png" alt="Card 4">
+                            <img src="images/p3.png" alt="Well-Built Infrastructure Icon">
                             <h6>Well-Built Infrastructure</h6>
                         </div>
-
+                        <div class="col-md-6 feature-box">
+                            <img src="images/p4.png" alt="Professional Staff Members Icon">
+                            <h6>Professional Staff Members</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                        <a href="#about-details" class="btn-play">MORE ABOUT US</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/pic1.jpg"class="img-fluid rounded" alt="About Kids">
-                    <img src="images/pic2.jpg"class="img-fluid rounded" alt="About Kids">
-                    <img src="images/pic3.jpg"class="img-fluid rounded" alt="About Kids">
-                    <img src="images/pic4.jpg"class="img-fluid rounded" alt="About Kids">
+                    <div class="about-images-container">
+                        <img src="images/pic1.jpg" class="about-image-1" alt="Kids in classroom">
+                        <img src="images/pic2.jpg" class="about-image-2" alt="Teacher online">
+                        <img src="images/pic3.jpg" class="about-image-3" alt="Kid learning online">
+                        <img src="images/pic4.jpg" class="about-image-3" alt="Kid learning online">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Courses Section -->
-    <section class="courses-section">
+        <section class="courses-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2>Our Programs & Activities</h2>
-                <p>Choose from a variety of fun and educational classes</p>
+            <div class="d-flex justify-content-center mb-5 course-filter-buttons">
+                <button class="btn active">All</button>
+                <button class="btn">Craft</button>
+                <button class="btn">Dance</button>
+                <button class="btn">Indoor</button>
+                <button class="btn">Language</button>
+                <button class="btn">Music</button>
+                <button class="btn">Sports</button>
             </div>
-            <div class="row">
-                <!-- Course 1 -->
-                <div class="col-md-4 mb-4">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
-                        <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="Kids Playing Club">
+                        <img src="images/sport1.jpg"class="img-fluid" alt="Kids Playing Club">
+                        <p class="category">Sports</p>
                         <h5>Kids Playing Club</h5>
-                        <p class="old-price">$60</p>
-                        <p class="price">$50</p>
-                        <button class="btn btn-join mt-2">Join Class</button>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$89</p>
+                            <p class="price">$79</p>
+                        </div>
+                        <button class="btn btn-join">Join Class</button>
                     </div>
                 </div>
-                <!-- Course 2 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
-                        <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="Painting Class">
+                        <img src="images/sport2.jpg"class="img-fluid" alt="Kids Playing Club">
+                        <p class="category">Sports</p>
+                        <h5>Kids Playing Club</h5>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$89</p>
+                            <p class="price">$79</p>
+                        </div>
+                        <button class="btn btn-join">Join Class</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <img src="images/craft1.jpg" class="img-fluid" alt="Painting Class">
+                        <p class="category">Craft</p>
                         <h5>Painting Class</h5>
-                        <p class="price">Free</p>
-                        <button class="btn btn-join mt-2">Start Course</button>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4
+                        </div>
+                        <div class="pricing">
+                            <p class="price free">Free</p>
+                        </div>
+                        <button class="btn btn-join">Start Course</button>
                     </div>
                 </div>
-                <!-- Course 3 -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="course-card">
-                        <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="Engineering Class">
+                        <img src="images/indoor1.png" class="img-fluid" alt="Engineering Class">
+                        <p class="category">Indoor</p>
                         <h5>Engineering Class</h5>
-                        <p class="old-price">$60</p>
-                        <p class="price">$40</p>
-                        <button class="btn btn-join mt-2">Starts 15 Sep</button>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$69</p>
+                            <p class="price">$49</p>
+                        </div>
+                        <button class="btn btn-start-date">Starts On : 18 Sep</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <img src="images/sport3.jpg" class="img-fluid" alt="Kids Playing Club">
+                        <p class="category">Sports</p>
+                        <h5>Kids Playing Club</h5>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$89</p>
+                            <p class="price">$79</p>
+                        </div>
+                        <button class="btn btn-join">Join Class</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <img src="images/sport4.jpg" class="img-fluid" alt="Kids Playing Club">
+                        <p class="category">Sports</p>
+                        <h5>Kids Playing Club</h5>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$89</p>
+                            <p class="price">$79</p>
+                        </div>
+                        <button class="btn btn-join">Join Class</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <img src="images/craft2.jpg" class="img-fluid" alt="Painting Class">
+                        <p class="category">Craft</p>
+                        <h5>Painting Class</h5>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4
+                        </div>
+                        <div class="pricing">
+                            <p class="price free">Free</p>
+                        </div>
+                        <button class="btn btn-join">Start Course</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="course-card">
+                        <img src="images/indoor2.jpg" class="img-fluid" alt="Engineering Class">
+                        <p class="category">Indoor</p>
+                        <h5>Engineering Class</h5>
+                        <p class="description">kids class friendly environment</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4
+                        </div>
+                        <div class="pricing">
+                            <p class="old-price">$69</p>
+                            <p class="price">$49</p>
+                        </div>
+                        <button class="btn btn-start-date">Starts On : 18 Sep</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
@@ -367,8 +586,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Experts Section -->
+    
     <section class="experts-section">
         <div class="container">
             <h2>Incredible People Behind Incredible Students</h2>
@@ -404,8 +622,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
+    
     <footer class="footer">
         <p>&copy; 2025 Kids Website | All Rights Reserved.</p>
     </footer>
