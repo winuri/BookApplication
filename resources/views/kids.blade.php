@@ -130,25 +130,51 @@
         .skyblue { background-color: #87ceeb; }
         .cream { background-color: #91e0a5ff; }
 
-        /* Other Sections (About, Courses, FAQ, Experts, Footer) */
-        .about-section { background: #0b1c45; padding: 80px 0; }
-        .feature-box { background: #3a07d5ff; padding: 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
-        .feature-box i { font-size: 2rem; color: #ff6a3d; margin-bottom: 10px; }
+        /* About*/
+        /* ADD THIS TO YOUR EXISTING <style> BLOCK */
 
+.about-section { 
+    background: #e2e0cfff; 
+    padding: 80px 0;
+    color: #000;
+}
+.about-image-grid {
+    display: grid;
+    /* Two columns: one for the top main image, two for the smaller bottom images */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.about-img-container {
+    border: 10px solid #fff; /* White border around images */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+        
+        /* Courses*/
         .courses-section { padding: 80px 0; }
         .course-card { background: #0b1c45; border-radius: 12px; padding: 20px; text-align: left; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
         .course-card img { border-radius: 12px; margin-bottom: 15px; }
         .course-card:hover { transform: translateY(-8px); transition: .3s; }
         .price { font-weight: bold; color: #ff6a3d; }
-
+        /* FAQ*/
         .faq-section { background: #fff; color: #000; padding: 80px 20px; }
         .faq-section h2 { font-weight: 700; margin-bottom: 40px; text-align: center; }
         .accordion-button { font-weight: 500; }
-
+        /* Experts*/
         .experts-section { background: #f9f9f9; padding: 80px 20px; text-align: center; color: #000; }
         .experts-section h2 { font-weight: 700; margin-bottom: 40px; }
         .expert-card img { border-radius: 10px; }
-
+        /* Footer*/
         .footer { background: #0b1c45; color: #fff; padding: 40px 20px; text-align: center; }
     </style>
 </head>
@@ -219,29 +245,38 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
+                    <h4>About Us</h4>
                     <h2>Globally Recognized Interactive Preschool Education</h2>
                     <p>Creative, fun and child-friendly environment with professional staff members. Learn with real-time activities and build strong foundations for future learning.</p>
                     <div class="row">
                         <div class="col-md-6 feature-box">
                             <i class="fas fa-child"></i>
+                            <img src="images/p1.png" alt="Card 4">
                             <h6>Child Friendly Environment</h6>
                         </div>
                         <div class="col-md-6 feature-box">
                             <i class="fas fa-chalkboard-teacher"></i>
-                            <h6>Professional Staff</h6>
+                            <img src="images/p2.png" alt="Card 4">
+                            <h6>professional Staff Members</h6>
                         </div>
                         <div class="col-md-6 feature-box">
                             <i class="fas fa-clock"></i>
+                            <img src="images/p3.png" alt="Card 4">
                             <h6>Real-Time Education</h6>
                         </div>
                         <div class="col-md-6 feature-box">
                             <i class="fas fa-school"></i>
+                            <img src="images/p4.png" alt="Card 4">
                             <h6>Well-Built Infrastructure</h6>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <img src="https://via.placeholder.com/500x350" class="img-fluid rounded" alt="About Kids">
+                    <img src="images/pic1.jpg"class="img-fluid rounded" alt="About Kids">
+                    <img src="images/pic2.jpg"class="img-fluid rounded" alt="About Kids">
+                    <img src="images/pic3.jpg"class="img-fluid rounded" alt="About Kids">
+                    <img src="images/pic4.jpg"class="img-fluid rounded" alt="About Kids">
                 </div>
             </div>
         </div>
