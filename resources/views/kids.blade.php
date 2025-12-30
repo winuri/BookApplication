@@ -454,17 +454,15 @@
             padding: 20px;
             border-radius: 0 0 12px 12px; 
         }
-        /* --- EXPERTS SECTION STYLES --- */
-
-/* Main Section Background/Spacing - Adjust as needed for overall page consistency */
+        
 .experts-section {
-    padding: 80px 0; /* Example padding */
-    background-color: #f8f9fa; /* Light background to help the section stand out */
+    padding: 80px 0; 
+    background-color: #f8f9fa; 
 }
 
 /* Heading styles */
 .experts-section .sub-heading {
-    color: #6c9a30; /* Green color for 'OUR EXPERTS' */
+    color: #6c9a30; 
     font-weight: 700;
     margin-bottom: 5px;
 }
@@ -472,7 +470,7 @@
 .experts-section .main-heading {
     font-size: 2.5rem;
     font-weight: 800;
-    color: #0b1c45; /* Dark blue/black text */
+    color: #0b1c45; 
     line-height: 1.2;
 }
 
@@ -487,38 +485,38 @@
     line-height: 1.6;
 }
 
-/* Decorative Icons/Elements Positioning (Right side of text) */
+
 .experts-section .text-content-right {
-    position: relative; /* Essential for absolute positioning of children */
+    position: relative; 
 }
 
-/* Pink/Red decorative element (Top Right) */
+
 .experts-section .deco-magic {
     position: absolute;
     top: -10px;
     right: 80px;
     font-size: 2rem;
-    color: #f06292; /* Pink color */
+    color: #f06292; 
 }
 
-/* Green decorative element (Bottom Right) */
+
 .experts-section .deco-green-star {
     position: absolute;
     bottom: 0px;
     right: 50px;
     font-size: 3rem;
-    color: #8bc34a; /* Green color */
+    color: #8bc34a; 
     transform: rotate(15deg);
 }
 
-/* Dashed Circle/Badge element (Far Right) */
+
 .experts-section .deco-badge-circle {
     position: absolute;
     top: 0px;
     right: -50px;
     width: 100px;
     height: 100px;
-    border: 2px dashed #ffc107; /* Yellow dashed border */
+    border: 2px dashed #ffc107; 
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -536,17 +534,17 @@
 
 /* Expert Card Styles */
 .expert-card .img-wrapper {
-    border: 3px solid #ddd; /* Prominent grey border */
+    border: 3px solid #ddd; /
     border-radius: 12px;
     overflow: hidden;
     padding: 5px;
-    position: relative; /* For the overlay effect on the last card */
+    position: relative; 
 }
 
 .expert-card img {
     border-radius: 8px;
     width: 100%;
-    height: 250px; /* Fixed height for uniformity */
+    height: 250px; 
     object-fit: cover;
 }
 
@@ -563,7 +561,7 @@
     margin-bottom: 0;
 }
 
-/* Specific Style for Elspeth's Card Overlay (Last Expert) */
+
 .expert-card .img-wrapper.overlay-effect::after {
     content: '';
     position: absolute;
@@ -571,12 +569,12 @@
     right: 0;
     width: 100%;
     height: 100%;
-    /* Radial gradient for the partial yellow-orange overlay */
+    
     background: radial-gradient(circle at 100% 0%, transparent 60%, rgba(255, 193, 7, 0.4) 100%);
     border-radius: 12px;
-    pointer-events: none; /* Allows clicks to pass through to the image */
+    pointer-events: none; 
 }
-        /* Footer*/
+   
         .footer { background: #0b1c45; color: #fff; padding: 40px 20px; text-align: center; }
 
 
