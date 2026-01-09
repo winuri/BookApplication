@@ -582,17 +582,17 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg p-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-3">Kids</a>
-            <div class="ms-auto">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Pripotel</a>
-                <a href="#">Buility</a>
-                <a href="{{ route('admin.login') }}" class="btn-login ms-3">Login</a>
-            </div>
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="{{ route('home') }}">Kids</a>
+        <div class="ms-auto">
+            <a href="{{ route('home') }}">Home</a>
+            <a href="#">About</a>
+            <a href="#">Pripotel</a>
+            <a href="#">Buility</a>
+            <a href="{{ route('login') }}" class="btn-login ms-3">Login</a>
         </div>
-    </nav>
+    </div>
+</nav>
         
     <div class="container d-flex flex-wrap align-items-center justify-content-between hero">
         <div>

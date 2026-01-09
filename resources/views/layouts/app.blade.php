@@ -144,7 +144,7 @@
 
 
 <li class="nav-item mb-2">
-    <a href="{{ route('qr.index') }}" class="nav-link {{ request()->routeIs('qr.index') ? 'active' : '' }}">
+    <a href="{{ route('qr.index') }}">QR Management</a>
         <img src="{{ asset('icons/qr-code_3037065.svg') }}" alt="QR"> QR Management
     </a>
 </li>

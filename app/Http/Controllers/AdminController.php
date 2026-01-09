@@ -1,36 +1,36 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    // Show login form
-    public function showLoginForm()
-    {
-        return view('admin.login'); // create this view
+    public function showLoginForm() {
+        return view('admin.login');
     }
 
-    // Handle login
-    public function login(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+    public function login(Request $request) {
+        $validUsername = "admin";
+        $validPassword = "12345678";
 
-        if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('/admin/dashboard');
+        if ($request->username === $validUsername && $request->password === $validPassword) {
+            // Set a manual session flag
+            session(['is_admin_logged_in' => true]);
+            return redirect()->route('dashboard');
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        return back()->with('error', 'Invalid Credentials');
     }
 
-    // Show dashboard
-    public function index()
-    {
-        return view('admin.dashboard'); // your dashboard view
+    public function index() {
+        // Manual security check
+        if (!session('is_admin_logged_in')) {
+            return redirect()->route('login');
+        }
+
+        return view('dashboard', [
+            'activeUsers' => 150,
+            'subscriptions' => 12,
+            'earnings' => '$500'
+        ]);
     }
 }
