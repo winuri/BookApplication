@@ -41,7 +41,7 @@
 
         /* Top Bar */
         .topbar {
-            background-color: #d3dce6; /* Light gray/blue */
+            background-color: #d3dce6; 
             padding: 15px 20px;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -120,8 +120,8 @@
         transition: background-color 0.3s, color 0.3s;
     }
     .add-new-btn:hover {
-        background-color: #d3d3d3; /* gray on hover */
-        color: #000671ff; /*  change text color to black */
+        background-color: #d3d3d3; 
+        color: #000671ff; 
     }
 
     </style>
@@ -144,7 +144,8 @@
 
 
 <li class="nav-item mb-2">
-    <a href="{{ route('qr.index') }}">QR Management</a>
+    <!--<a href="{{ route('qr.index') }}">QR Management</a>-->
+    <a href="{{ route('qr.index') }}" class="nav-link {{ request()->routeIs('qr.index') ? 'active' : '' }}">
         <img src="{{ asset('icons/qr-code_3037065.svg') }}" alt="QR"> QR Management
     </a>
 </li>
@@ -174,6 +175,13 @@
                     <img src="{{ asset('icons/web_13737621.svg') }}" alt="Settings"> System Settings
                 </a>
             </li>
+
+            <form action="{{ route('logout') }}" method="POST" class="d-inline">
+            @csrf
+                <button type="submit" class="btn btn-danger btn-sm w-100 d-flex align-items-center justify-content-center">
+                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                </button>
+            </form>
         </ul>
     </aside>
 

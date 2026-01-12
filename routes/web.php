@@ -10,8 +10,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContentController;
-
-
+use App\Http\Controllers\QrController;
+use App\Http\Controllers\ImageController;
 
 // Public Landing Page
 Route::get('/', function () {
@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('login');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
 
+// Logout Route
+Route::post('/admin/logout', [AdminController::class, 'logout'])->name('logout');
+
 // Protected Dashboard
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
@@ -31,6 +34,9 @@ Route::get('/content-management', [ContentController::class, 'index'])->name('co
 // Add this line with your other routes
 Route::get('/qr-management', [QrController::class, 'index'])->name('qr.index');
 
+// Image Management
+Route::get('/admin/edit-image/{key}', [ImageController::class, 'edit'])->name('admin.image.edit');
+Route::post('/admin/edit-image/{key}', [ImageController::class, 'update'])->name('admin.image.update');
 
 // ------------------ Public Website ------------------
 // Landing page for all users

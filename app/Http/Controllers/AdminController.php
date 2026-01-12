@@ -21,6 +21,16 @@ class AdminController extends Controller
         return back()->with('error', 'Invalid Credentials');
     }
 
+    public function logout() {
+    // Clear the specific admin session flag
+    session()->forget('is_admin_logged_in');
+    
+    // Completely clear and regenerate session for security
+    session()->flush();
+    
+    return redirect()->route('home')->with('success', 'Logged out successfully!');
+}
+
     public function index() {
         // Manual security check
         if (!session('is_admin_logged_in')) {
